@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="bg-BG">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="">
+  <meta name="keywords" content="...">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Digale Foodplan</title>
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="img/favicon/site.webmanifest">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="nav justify-content-center gap-5 m-2">
+      <a class="bi bi-facebook" href="http://" title=""></a>
+      <a class="bi bi-instagram" href="http://" title=""></a>
+      <a class="bi bi-envelope" href="mailto:" title=""></a>
+      <a class="bi bi-telephone-fill" href="tel:+" title=""></a>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="index.html"><img src="img/logo_min.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" role="button" title="">Начало</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html" role="button" title="">Меню</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html" role="button" title=""><i class="bi bi-cart"></i> Количка</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+              title="">
+              <i class="bi bi-person"></i> Вход</a>
+            <ul class="dropdown-menu">
+              <li><a title="" class="dropdown-item" href="#" data-bs-toggle="modal"
+                  data-bs-target="#signinModal">Вход</a></li>
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#signupModal"
+                  title="">Регистрация</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Sign-in modal -->
+  <div class="modal fade" id="signinModal" aria-hidden="true" aria-labelledby="signinModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Вход</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="needs-validation" novalidate>
+            <div class="form-floating mb-2">
+              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+              <label for="floatingInput">Email адрес</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required>
+              <label for="floatingPassword">Парола</label>
+            </div>
+            <div class="small m-2">Забравена <a href="http://" title="">парола</a>?</div>
+            <button class="w-100 btn btn-lg btn-success" type="submit">Вход</button>
+          </form>
+          <div class="small m-2">Нямаш<a href="#" data-bs-target="#signupModal" data-bs-toggle="modal" title="">
+              регистрация</a>?
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Sign-up modal -->
+  <div class="modal fade" id="signupModal" aria-hidden="true" aria-labelledby="signupModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Регистрация</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="needs-validation" novalidate>
+            <div class="form-floating mb-2">
+              <input type="text" class="form-control" id="floatingInput" placeholder="Име и фамилия*" required>
+              <label for="floatingInput">Име и фамилия*</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input type="text" class="form-control" id="floatingInput" placeholder="Адрес за доставка*">
+              <label for="floatingInput" class="form-label">Адрес за доставка</label>
+            </div>
+            <div class="form-floating mb-2">
+              <label for="email" class="form-label">Email*</label>
+              <input type="email" class="form-control" id="email" placeholder="Email адрес" required>
+            </div>
+            <div class="form-floating mb-2">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Парола*" required>
+              <label for="floatingPassword">Парола*</label>
+            </div>
+            <div class="form-floating mb-2">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Парола*" required>
+              <label for="floatingPassword">Потвърди паролата*</label>
+            </div>
+            <div class="checkbox m-2">
+              <label for="checkbox">
+                <input type="checkbox" required>Запознах се с <a href="http://" title="">общите условия</a> и ги
+                приемам.
+              </label>
+            </div>
+            <button class="w-100 btn btn-lg btn-success" type="submit">Регистрация</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div id="baners" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#baners" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#baners" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <!-- <button type="button" data-bs-target="#baners" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/baner-lg.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#baners" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#baners" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h3>Топ менюта</h3>
+      <div id="menus-carousel" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#menus-carousel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#menus-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <!-- <button type="button" data-bs-target="#menus-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#menus-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button> -->
+        </div>
+        <div class="carousel-inner container-fluid">
+          <div class="carousel-item active">
+            <div class="row gap-3">
+              <div class="col">
+                <div class="card shadow">
+                  <img src="img/meals/greek.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                      card's content.
+                    </p>
+                    <div class="d-flex">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                    </div>
+                    <div class=" btn-group" role="group" aria-label="">
+                      <button type="button" class="btn btn-outline-secondary"> 9,99 лв.</button>
+                      <button type="button" class="btn btn-outline-secondary"> 9,99 лв.</button>
+                      <button type="button" class="btn btn-outline-secondary "><svg xmlns="http://www.w3.org/2000/svg"
+                          width="16" height="16" fill="currentColor" class="bi bi-info-lg" viewBox="0 0 16 16">
+                          <path
+                            d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704l1.323-6.208Zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0Z" />
+                        </svg></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow">
+                  <img src="img/meals/greek.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                      card's content.
+                    </p>
+                    <div class="d-flex">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                    </div>
+                    <div class="btn-group" role="group" aria-label="">
+                      <button type="button" class="btn btn-outline-secondary"> 9,99 лв.</button>
+                      <button type="button" class="btn btn-outline-secondary"> 9,99 лв.</button>
+                      <button type="button" class="btn btn-outline-secondary "><svg xmlns="http://www.w3.org/2000/svg"
+                          width="16" height="16" fill="currentColor" class="bi bi-info-lg" viewBox="0 0 16 16">
+                          <path
+                            d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704l1.323-6.208Zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0Z" />
+                        </svg></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow">
+                  <img src="img/meals/greek.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                      card's content.
+                    </p>
+                    <div class="d-flex">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                    </div>
+                    <div class="btn-group" role="group" aria-label="">
+                      <button type="button" class="btn btn-outline-secondary"> 9,99 лв.</button>
+                      <button type="button" class="btn btn-outline-secondary"> 9,99 лв.</button>
+                      <button type="button" class="btn btn-outline-secondary"><svg xmlns="http://www.w3.org/2000/svg"
+                          width="16" height="16" fill="currentColor" class="bi bi-info-lg" viewBox="0 0 16 16">
+                          <path
+                            d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704l1.323-6.208Zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0Z" />
+                        </svg></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow">
+                  <img src="img/meals/greek.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                      card's content.
+                    </p>
+                    <div class="d-flex">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                    </div>
+                    <div class="btn-group" role="group" aria-label="">
+                      <button type="button" class="btn btn-outline-secondary"> 9,99 лв.</button>
+                      <button type="button" class="btn btn-outline-secondary"> 9,99 лв.</button>
+                      <button type="button" class="btn btn-outline-secondary "><svg xmlns="http://www.w3.org/2000/svg"
+                          width="16" height="16" fill="currentColor" class="bi bi-info-lg" viewBox="0 0 16 16">
+                          <path
+                            d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704l1.323-6.208Zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0Z" />
+                        </svg></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row gap-3">
+              <div class="col">
+                <div class="card shadow">
+                  <img src="img/meals/greek.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                      card's content.
+                    </p>
+                    <div class="d-flex">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                    </div>
+                    <div class=" btn-group" role="group" aria-label="">
+                      <button type="button" class="btn btn-outline-secondary"> 9,99 лв.</button>
+                      <button type="button" class="btn btn-outline-secondary"> 9,99 лв.</button>
+                      <button type="button" class="btn btn-outline-secondary "><svg xmlns="http://www.w3.org/2000/svg"
+                          width="16" height="16" fill="currentColor" class="bi bi-info-lg" viewBox="0 0 16 16">
+                          <path
+                            d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704l1.323-6.208Zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0Z" />
+                        </svg></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow">
+                  <img src="img/meals/greek.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                      card's content.
+                    </p>
+                    <div class="d-flex">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                    </div>
+                    <div class="btn-group" role="group" aria-label="">
+                      <button type="button" class="btn btn-outline-secondary"> 9,99 лв.</button>
+                      <button type="button" class="btn btn-outline-secondary"> 9,99 лв.</button>
+                      <button type="button" class="btn btn-outline-secondary "><svg xmlns="http://www.w3.org/2000/svg"
+                          width="16" height="16" fill="currentColor" class="bi bi-info-lg" viewBox="0 0 16 16">
+                          <path
+                            d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704l1.323-6.208Zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0Z" />
+                        </svg></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow">
+                  <img src="img/meals/greek.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                      card's content.
+                    </p>
+                    <div class="d-flex">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                    </div>
+                    <div class="btn-group" role="group" aria-label="">
+                      <button type="button" class="btn btn-outline-secondary"> 9,99 лв.</button>
+                      <button type="button" class="btn btn-outline-secondary"> 9,99 лв.</button>
+                      <button type="button" class="btn btn-outline-secondary "><svg xmlns="http://www.w3.org/2000/svg"
+                          width="16" height="16" fill="currentColor" class="bi bi-info-lg" viewBox="0 0 16 16">
+                          <path
+                            d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704l1.323-6.208Zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0Z" />
+                        </svg></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card shadow">
+                  <img src="img/meals/greek.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                      card's content.
+                    </p>
+                    <div class="d-flex">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                      <img class="tag" src="img/icons/salad.png" alt="">
+                    </div>
+                    <div class="btn-group" role="group" aria-label="">
+                      <button type="button" class="btn btn-outline-secondary"> 9,99 лв.</button>
+                      <button type="button" class="btn btn-outline-secondary"> 9,99 лв.</button>
+                      <button type="button" class="btn btn-outline-secondary "><svg xmlns="http://www.w3.org/2000/svg"
+                          width="16" height="16" fill="currentColor" class="bi bi-info-lg" viewBox="0 0 16 16">
+                          <path
+                            d="m9.708 6.075-3.024.379-.108.502.595.108c.387.093.464.232.38.619l-.975 4.577c-.255 1.183.14 1.74 1.067 1.74.72 0 1.554-.332 1.933-.789l.116-.549c-.263.232-.65.325-.905.325-.363 0-.494-.255-.402-.704l1.323-6.208Zm.091-2.755a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0Z" />
+                        </svg></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#menus-carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#menus-carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container-fluid">
+      <h1>За нас</h1>
+      <div class="row justify-content-evenly gap-3">
+        <div class="col border border-5 border-success-subtle rounded-5 shadow blur-light">
+          <img src="img/clock.png" alt="clock">
+          <h3>На време</h3>
+          <p>Наш служител ще достави поръчката Ви в определен от Вас час.</p>
+        </div>
+        <div class="col border border-5 border-success-subtle rounded-5 shadow blur-light">
+          <img src="img/strong.png" alt="strong">
+          <h3>Здравословно</h3>
+          <p>&#9745; Витамини<br>&#9745; Минерали<br>&#9745; Антиоксиданти<br>и <strong>ВСИЧКО</strong>, от което имате
+            нужда.</p>
+        </div>
+        <div class="col border border-5 border-success-subtle rounded-5 shadow blur-light">
+          <img src="img/fresh.png" alt="fresh">
+          <h3>Прясно и чисто</h3>
+          <p>Държим, както на хигиената, така и на чистото фермерско производство</p>
+        </div>
+        <div class="col border border-5 border-success-subtle rounded-5 shadow blur-light">
+          <img src="img/no-money.png" alt="fresh">
+          <h3>Не плащаш по време на доставка</h3>
+          <p>Спестете <strong>ВРЕМЕ</strong> и <strong>ПАРИ</strong></p>
+        </div>
+        <div class="col border border-5 border-success-subtle rounded-5 shadow blur-light">
+          <img src="img/doktor.png" alt="doktor">
+          <h3>Индивидуално меню</h3>
+          <p><strong>Маг. Фармацефт</strong> ще се грижи за изготвянето на индивидуалните менюта.</p>
+        </div>
+        <div class="col border border-5 border-success-subtle rounded-5 shadow blur-light">
+          <img src="img/frozen.png" alt="frozen">
+          <h3>Без замразяване</h3>
+          <p>Това подобрява, както вкуса, така и качеството на вашата храна.</p>
+        </div>
+      </div>
+      <div class="row rounded-5 shadow blur-light mt-3">
+        <h3>Кои сме ние</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique, quam a iaculis vulputate, nisi justo
+          euismod
+          dolor, ut auctor dolor est in lorem.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container-fluid blur-dark footer">
+      <div class="row">
+        <div class="col">
+          <img class="mb-2" src="img/logo_min.png" height="100" alt="logo">
+          <p>Наистина <strong>здравословна</strong> кухня</p>
+          <hr>
+          <a class="bi bi-facebook" href="http://" title=""></a>
+          <a class="bi bi-instagram" href="http://" title=""></a>
+        </div>
+        <div class="col">
+          <h5>Навигация</h5>
+          <li><a href="" title="">За нас</a></li>
+          <li><a href="contact.html"> title=""Контакти</a></li>
+          <li><a href="" title="">Как да поръчам</a></li>
+        </div>
+        <div class="col">
+          <h5>Общи условия</h5>
+          <li><a href="" title="">Общи условия</a></li>
+          <li><a href="" title="">Политика за поверителност</a></li>
+          <li><a href="" title="">Бисквитки</a></li>
+        </div>
+        <div class="col">
+          <h5>Свържи се с нас!</h5>
+          <li><a class="bi bi-telephone" href="tel:+359 123456789" title=""> 0123456789</a></li>
+          <li><a class="bi bi-telephone" href="tel:+359 123456789" title=""> 0123456789</a></li>
+          <li><a class="bi bi-envelope" href="mailto:" title="">...</a></li>
+          <hr>
+          <h5>Работно време:</h5>
+          <p>Пон - Пет: 09:00 - 18:00</p>
+        </div>
+      </div>
+
+      <p>&copy; 2023</p>
+      <p class="hidden">
+        <a href="https://freepic.com/" title="">All images are downloaded from freepic.</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="js/index.js"></script>
+
+
+</body>
+
+</html>
