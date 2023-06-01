@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="bg-BG">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="">
+  <meta name="keywords" content="...">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Digale Foodplan</title>
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon" href="../img/favicon.ico">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="nav justify-content-center gap-5 p-2">
+      <a class="bi bi-facebook" href="http://"></a>
+      <a class="bi bi-instagram" href="http://"></a>
+      <a class="bi bi-envelope" href="mailto:"></a>
+      <a class="bi bi-telephone-fill" href="tel:+"></a>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="index.html"><img src="../img/logo_min.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#" role="button">Начало</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html" role="button">Меню</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" role="button"><i class="bi bi-cart"></i> Количка</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-person"></i> Моят профил</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#signinModal">Моят
+                  профил</a></li>
+              <li><a class="dropdown-item" href="#">Направени поръчки</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Адреси за доставка</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Свържи се с нас</h2>
+    <div class="row">
+      <div class="col">
+        <form class="contact-form text-start needs-validation">
+          <div class="mb-3">
+            <label for="name" class="form-label">Вашето име</label>
+            <input type="text" class="form-control" id="name">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Вашият e-mail</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label">Относно</label>
+            <input type="text" class="form-control" id="subject" required>
+          </div>
+          <div class="mb-3">
+            <label for="textarea" class="form-label">Вашето съобщение</label>
+            <textarea class="form-control" id="textarea" rows="5"></textarea>
+          </div>
+          <button type="submit" class="btn btn-success">Изпрати</button>
+        </form>
+      </div>
+      <div class="col">
+        <img src="../img/logo_min.png" alt="logo">
+
+      </div>
+    </div>
+
+
+  </div>
+
+  <footer>
+    <div class="container-fluid blur-dark footer">
+      <div class="row">
+        <div class="col">
+          <img class="mb-2" src="../img/logo_min.png" height="100" alt="logo">
+          <p>здравословна кухня бла бла</p>
+          <a class="bi bi-facebook" href="http://"></a>
+          <a class="bi bi-instagram" href="http://"></a>
+        </div>
+        <div class="col">
+          <h5>Навигация</h5>
+          <li><a href="">За нас</a></li>
+          <li><a href="">Контакти</a></li>
+          <li><a href="">Как да поръчам</a></li>
+        </div>
+        <div class="col">
+          <h5>Общи условия</h5>
+          <li><a href="">Общи условия</a></li>
+          <li><a href="">Политика за поверителност</a></li>
+          <li><a href="">Бисквитки</a></li>
+        </div>
+        <div class="col">
+          <h5>Свържи се с нас!</h5>
+          <li><a class="bi bi-telephone" href="tel:+359 123456789"> 0123456789</a></li>
+          <li><a class="bi bi-telephone" href="tel:+359 123456789"> 0123456789</a></li>
+          <li><a class="bi bi-envelope" href="mailto:">...</a></li>
+          <hr>
+          <h5>Работно време:</h5>
+          <p>Пон - Пет: 09:00 - 18:00</p>
+        </div>
+      </div>
+
+      <p>&copy; 2023</p>
+      <p class="hidden">
+        <a href="https://freepic.com/">All images are downloaded from freepic.</a>
+      </p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="#"></script>
+</body>
+
+</html>
