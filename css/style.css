@@ -121,6 +121,12 @@ section hr:after {
 
 .menu-bar>a {
 	left: 80%;
+	max-width: 10rem;
+}
+
+.red-arrow {
+	width: 6rem;
+	rotate: -15deg;
 }
 
 .btn-success {
@@ -279,6 +285,19 @@ footer {
 
 	.menu-bar .btn {
 		padding: 2% !important;
+	}
+
+	.menu-bar>a {
+		position: relative !important;
+		left: 0;
+		float: right;
+		max-width: min-content;
+	}
+
+	.red-arrow {
+		width: 3rem;
+		rotate: -25deg;
+		z-index: -1;
 	}
 
 	.tag-bar {
