@@ -23,12 +23,13 @@ body {
 	z-index: 9999;
 } */
 
+
 .container-fluid {
 	padding: 2% 5%;
 }
 
 .container {
-	margin: 5% auto;
+	margin: 3% auto;
 }
 
 a {
@@ -116,7 +117,10 @@ section hr:after {
 
 .menu-bar .btn-lg {
 	padding: 10px 25px;
-	font-size: 1.8rem;
+}
+
+.menu-bar>a {
+	left: 80%;
 }
 
 .btn-success {
@@ -171,7 +175,7 @@ section#list .carousel-indicators,
 
 
 .carousel .card {
-	max-width: 18rem;
+	max-width: 20rem;
 	height: 100%;
 	margin: auto;
 }
@@ -208,7 +212,19 @@ section#cart-items .card {
 }
 
 
+.menu-page .modal-backdrop {
+	position: absolute !important;
+	background-color: rgb(255, 255, 255, 0.5);
+	backdrop-filter: blur(5px) !important;
+	top: 50% !important;
+	left: 1% !important;
+	width: 72% !important;
+	height: 60% !important;
+}
 
+.menu-page .modal-open {
+	display: none !important;
+}
 
 .container#checkout {
 	max-width: 960px;

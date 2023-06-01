@@ -24,7 +24,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
   <link rel="manifest" href="img/favicon/site.webmanifest">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -37,7 +37,7 @@
       <a class="bi bi-telephone-fill" href="tel:+" title=""></a>
     </div>
     <nav class="navbar navbar-expand-lg">
-      <a class="navbar-brand" href="index.html"><img src="img/logo_min.png" alt="logo"></a>
+      <a class="navbar-brand" href="./index.html"><img src="./img/logo_min.png" alt="logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
         aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -45,13 +45,13 @@
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html" role="button" title="">Начало</a>
+            <a class="nav-link" href="./index.html" role="button" title="">Начало</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="menu.html" role="button" title="">Меню</a>
+            <a class="nav-link" href="./pages/menu.html" role="button" title="">Меню</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cart.html" role="button" title=""><i class="bi bi-cart"></i> Количка</a>
+            <a class="nav-link" href="./pages/cart.html" role="button" title=""><i class="bi bi-cart"></i> Количка</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
@@ -177,7 +177,7 @@
         </div>
         <div class="carousel-inner container-fluid">
           <div class="carousel-item active">
-            <div class="row gap-3">
+            <div class="row g-3">
               <div class="col">
                 <div class="card shadow">
                   <img src="img/meals/greek.png" class="card-img-top" alt="...">
@@ -285,7 +285,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <div class="row gap-3">
+            <div class="row g-3">
               <div class="col">
                 <div class="card shadow">
                   <img src="img/meals/greek.png" class="card-img-top" alt="...">
@@ -405,45 +405,48 @@
 
   <section id="about">
     <div class="container-fluid">
-      <h1>За нас</h1>
-      <div class="row justify-content-evenly gap-3">
-        <div class="col border border-5 border-success-subtle rounded-5 shadow blur-light">
-          <img src="img/clock.png" alt="clock">
-          <h3>На време</h3>
-          <p>Наш служител ще достави поръчката Ви в определен от Вас час.</p>
+      <div class="container-xxl p-0">
+        <h1>За нас</h1>
+        <div class="row justify-content-evenly g-3">
+          <div class="col border border-5 border-success-subtle rounded-5 shadow blur-light">
+            <img src="img/clock.png" alt="clock">
+            <h3>На време</h3>
+            <p>Наш служител ще достави поръчката Ви в определен от Вас час.</p>
+          </div>
+          <div class="col border border-5 border-success-subtle rounded-5 shadow blur-light">
+            <img src="img/strong.png" alt="strong">
+            <h3>Здравословно</h3>
+            <p>&#9745; Витамини<br>&#9745; Минерали<br>&#9745; Антиоксиданти<br>и <strong>ВСИЧКО</strong>, от което
+              имате
+              нужда.</p>
+          </div>
+          <div class="col border border-5 border-success-subtle rounded-5 shadow blur-light">
+            <img src="img/fresh.png" alt="fresh">
+            <h3>Прясно и чисто</h3>
+            <p>Държим, както на хигиената, така и на чистото фермерско производство</p>
+          </div>
+          <div class="col border border-5 border-success-subtle rounded-5 shadow blur-light">
+            <img src="img/no-money.png" alt="fresh">
+            <h3>Не плащаш по време на доставка</h3>
+            <p>Спестете <strong>ВРЕМЕ</strong> и <strong>ПАРИ</strong></p>
+          </div>
+          <div class="col border border-5 border-success-subtle rounded-5 shadow blur-light">
+            <img src="img/doktor.png" alt="doktor">
+            <h3>Индивидуално меню</h3>
+            <p><strong>Маг. Фармацефт</strong> ще се грижи за изготвянето на индивидуалните менюта.</p>
+          </div>
+          <div class="col border border-5 border-success-subtle rounded-5 shadow blur-light">
+            <img src="img/frozen.png" alt="frozen">
+            <h3>Без замразяване</h3>
+            <p>Това подобрява, както вкуса, така и качеството на вашата храна.</p>
+          </div>
         </div>
-        <div class="col border border-5 border-success-subtle rounded-5 shadow blur-light">
-          <img src="img/strong.png" alt="strong">
-          <h3>Здравословно</h3>
-          <p>&#9745; Витамини<br>&#9745; Минерали<br>&#9745; Антиоксиданти<br>и <strong>ВСИЧКО</strong>, от което имате
-            нужда.</p>
+        <div class="row rounded-5 shadow blur-light mt-3">
+          <h3>Кои сме ние</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique, quam a iaculis vulputate, nisi justo
+            euismod
+            dolor, ut auctor dolor est in lorem.</p>
         </div>
-        <div class="col border border-5 border-success-subtle rounded-5 shadow blur-light">
-          <img src="img/fresh.png" alt="fresh">
-          <h3>Прясно и чисто</h3>
-          <p>Държим, както на хигиената, така и на чистото фермерско производство</p>
-        </div>
-        <div class="col border border-5 border-success-subtle rounded-5 shadow blur-light">
-          <img src="img/no-money.png" alt="fresh">
-          <h3>Не плащаш по време на доставка</h3>
-          <p>Спестете <strong>ВРЕМЕ</strong> и <strong>ПАРИ</strong></p>
-        </div>
-        <div class="col border border-5 border-success-subtle rounded-5 shadow blur-light">
-          <img src="img/doktor.png" alt="doktor">
-          <h3>Индивидуално меню</h3>
-          <p><strong>Маг. Фармацефт</strong> ще се грижи за изготвянето на индивидуалните менюта.</p>
-        </div>
-        <div class="col border border-5 border-success-subtle rounded-5 shadow blur-light">
-          <img src="img/frozen.png" alt="frozen">
-          <h3>Без замразяване</h3>
-          <p>Това подобрява, както вкуса, така и качеството на вашата храна.</p>
-        </div>
-      </div>
-      <div class="row rounded-5 shadow blur-light mt-3">
-        <h3>Кои сме ние</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tristique, quam a iaculis vulputate, nisi justo
-          euismod
-          dolor, ut auctor dolor est in lorem.</p>
       </div>
     </div>
   </section>
@@ -461,7 +464,7 @@
         <div class="col">
           <h5>Навигация</h5>
           <li><a href="" title="">За нас</a></li>
-          <li><a href="contact.html"> title=""Контакти</a></li>
+          <li><a href="./pages/contact.html">Контакти</a></li>
           <li><a href="" title="">Как да поръчам</a></li>
         </div>
         <div class="col">
@@ -493,7 +496,7 @@
     crossorigin="anonymous"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <script src="js/index.js"></script>
+  <script src="./js/index.js"></script>
 
 
 </body>
